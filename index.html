@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terg</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+<div class="app-header">
+      <div class="header-top-row">
+        <h1 class="header-title">Tennis Ergebnisse <span class="version-number">V7.23-2</span></h1>
+      </div>
+    </div>
+
+        <div class="input-group Spieler1-input">
+          <label for="Spieler1-input">Spieler1:</label>
+          <input type="text" id="Spieler1-input" placeholder="Karl-Heinz">
+        </div>
+
+        <div class="input-group Spieler2-input">
+          <label for="Spieler2-input">Spieler2:</label>
+          <input type="text" id="Spieler2-input" placeholder="Franz">
+        </div>
+
+        <div class="input-group ergebnis-input">
+          <label for="ergebnis-input">Ergebnis:</label>
+          <input type="text" id="ergebnis-input" placeholder="6:4, 5:7, 4:4, (w.o.)">
+        </div>
+
+        <div id="ergebnis-overlay">
+          <div class="overlay-content">
+            <h3>Ergebnis-Eingabe</h3>
+
+            <div class="player-labels">
+              <div class="satz-label"></div>
+              <div class="score-wrapper-label" id="overlay-spieler1">Spieler 1</div>
+              <div class="colon"></div>
+              <div class="score-wrapper-label" id="overlay-spieler2">Spieler 2</div>
+            </div>
+
+            <div class="satz">
+              <div class="satz-label">Satz 1:</div>
+              <div class="score-wrapper">
+                <input type="number" id="score1" class="score-input" value="0" min="0">
+                <div class="spin-buttons">
+                  <button onclick="changeValue('score1', 1)">▲</button>
+                  <button onclick="changeValue('score1', -1)">▼</button>
+                </div>
+              </div>
+              <span class="colon">:</span>
+              <div class="score-wrapper">
+                <input type="number" id="score2" class="score-input" value="0" min="0">
+                <div class="spin-buttons">
+                  <button onclick="changeValue('score2', 1)">▲</button>
+                  <button onclick="changeValue('score2', -1)">▼</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="satz">
+              <div class="satz-label">Satz 2:</div>
+              <div class="score-wrapper">
+                <input type="number" id="score3" class="score-input" value="0" min="0">
+                <div class="spin-buttons">
+                  <button onclick="changeValue('score3', 1)">▲</button>
+                  <button onclick="changeValue('score3', -1)">▼</button>
+                </div>
+              </div>
+              <span class="colon">:</span>
+              <div class="score-wrapper">
+                <input type="number" id="score4" class="score-input" value="0" min="0">
+                <div class="spin-buttons">
+                  <button onclick="changeValue('score4', 1)">▲</button>
+                  <button onclick="changeValue('score4', -1)">▼</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="satz">
+              <div class="satz-label">Satz 3:</div>
+              <div class="score-wrapper">
+                <input type="number" id="score5" class="score-input" value="0" min="0">
+                <div class="spin-buttons">
+                  <button onclick="changeValue('score5', 1)">▲</button>
+                  <button onclick="changeValue('score5', -1)">▼</button>
+                </div>
+              </div>
+              <span class="colon">:</span>
+              <div class="score-wrapper">
+                <input type="number" id="score6" class="score-input" value="0" min="0">
+                <div class="spin-buttons">
+                  <button onclick="changeValue('score6', 1)">▲</button>
+                  <button onclick="changeValue('score6', -1)">▼</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="overlay-checkbox">
+              <label><input type="checkbox" id="checkWO"> Walk over</label>
+            </div>
+
+            <div class="overlay-buttons">
+              <button class="ok-button" onclick="übernehmenErgebnis()">Übernehmen</button>
+              <button class="cancel-button" onclick="closeOverlay()">Abbrechen</button>
+            </div>
+          </div>
+        </div>
+
+  </div>  <script src="script.js"></script>
+
+</body>
+
+</html>
